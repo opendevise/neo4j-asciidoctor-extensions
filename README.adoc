@@ -1,0 +1,33 @@
+= Asciidoctor extension prototypes for GraphGist & the Neo4j docs
+
+This repository hosts a collection of Asciidoctor extension prototypes for GraphGist & the Neo4j docs.
+The prototypes should provide some insight into the power of the Asciidoctor extension facility.
+
+== Running the examples in Ruby
+
+Right now, the extensions are written to be self-contained to demonstrate proof of concept.
+You'll need the latest Asciidoctor 1.5.0 preview release to run them:
+
+ $ gem install asciidoctor --pre
+
+Some of the extensions already require tilt and slim:
+
+ $ gem install tilt slim
+
+Then, run the example using Ruby:
+
+ $ ruby extension-dot-block.rb run
+
+You can also run the extensions on a sample file:
+
+ $ ruby extension-dot-block.rb dot-examples.adoc /path/to/neo4j-doctools/src/bin/fonts
+
+== Running the examples in JavaScript
+
+These examples will also work in JavaScript with Asciidoctor.js.
+First, you'll need both the asciidoctor.js and asciidoctor_extensions.js scripts.
+Then, you'll need to use the Opal compiler to compile the custom extension to JavaScript as well.
+You can find docs on using the Opal compiler at http://opalrb.org/docs/static_applications/.
+
+There's an example in this repository of a dot block extension that uses viz.js to generate the SVG.
+Just open link:javascript-examples/extension-dot-block-viz.html[] in your browser to see it run.

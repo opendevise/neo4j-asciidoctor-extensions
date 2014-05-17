@@ -1,0 +1,26 @@
+= Asciidoctor Extension APIs
+
+[dot, processors.svg, meta]
+----
+Processor [fillcolor="NODEHIGHLIGHT"]
+Document [fillcolor="NODE2HIGHLIGHT"]
+Reader [fillcolor="NODE2HIGHLIGHT"]
+Parser [fillcolor="NODE2HIGHLIGHT"]
+Preprocessor [fillcolor="NODEHIGHLIGHT"]
+Treeprocessor [fillcolor="NODEHIGHLIGHT"]
+Postprocessor [fillcolor="NODEHIGHLIGHT"]
+IncludeProcessor [fillcolor="NODEHIGHLIGHT"]
+BlockProcessor [fillcolor="NODEHIGHLIGHT"]
+BlockMacroProcessor [fillcolor="NODEHIGHLIGHT"]
+InlineMacroProcessor [fillcolor="NODEHIGHLIGHT"]
+Processor -> Document
+Processor -> Reader
+Processor -> Parser
+Document -> Preprocessor
+Document -> Treeprocessor
+Document -> Postprocessor
+Reader -> IncludeProcessor
+Parser -> BlockProcessor
+Parser -> BlockMacroProcessor
+Parser -> InlineMacroProcessor
+----
